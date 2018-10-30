@@ -29,6 +29,7 @@ class CreateMajorsTable extends Migration
             $table->text('en_courses_associate');
             $table->text('kh_courses_associate');
             $table->boolean('is_published')->default(0);
+            $table->boolean('is_deleted')->default(0);
              //The field that will appear for almost tables
             $table->integer('creator_id')->unsigned()->index()->nullable();
             $table->foreign('creator_id')->references('id')->on('users');

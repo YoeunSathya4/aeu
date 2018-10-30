@@ -20,6 +20,7 @@ class CreateMessagesTable extends Migration
             $table->string('email', 150)->default('');
             $table->string('subject', 150)->default('');
             $table->text('message');
+            $table->boolean('is_deleted')->default(0);
              //The field that will appear for almost tables
             $table->integer('creator_id')->unsigned()->index()->nullable();
             $table->foreign('creator_id')->references('id')->on('users');

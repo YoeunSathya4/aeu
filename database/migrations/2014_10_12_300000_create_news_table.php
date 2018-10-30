@@ -25,6 +25,7 @@ class CreateNewsTable extends Migration
             $table->string('image', 250)->default('');
             $table->string('image_detail', 250)->default('');
             $table->boolean('is_published')->default(0);
+            $table->boolean('is_deleted')->default(0);
              //The field that will appear for almost tables
             $table->integer('creator_id')->unsigned()->index()->nullable();
             $table->foreign('creator_id')->references('id')->on('users');

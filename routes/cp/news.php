@@ -12,7 +12,9 @@ Route::group([], function () {
 	Route::post('update-status', 				['as' => 'update-status', 	'uses' => 'NewsController@updateStatus']);
 	Route::post('update-delete-status', 				['as' => 'update-delete-status', 	'uses' => 'NewsController@updateDeletedStatus']);
 	
-});
+	Route::get('/{id}/faculty', 		['as' => 'faculty', 			'uses' => 'NewsController@faculty']);
+	Route::get('/check-faculty', 		['as' => 'check-faculty', 		'uses' => 'NewsController@checkFaculties']);
+});	
 
 
 

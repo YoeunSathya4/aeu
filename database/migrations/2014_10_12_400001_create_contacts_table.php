@@ -20,6 +20,7 @@ class CreateContactsTable extends Migration
             $table->text('en_content');
             $table->text('kh_content');
             $table->boolean('is_published')->default(0);
+            $table->boolean('is_deleted')->default(0);
              //The field that will appear for almost tables
             $table->integer('creator_id')->unsigned()->index()->nullable();
             $table->foreign('creator_id')->references('id')->on('users');

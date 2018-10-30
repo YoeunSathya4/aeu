@@ -13,6 +13,7 @@ use App\Http\Controllers\CamCyber\FunctionController;
 use App\Http\Controllers\CamCyber\GenerateSlugController as GenerateSlug;
 
 use App\Model\News\News as Model;
+use App\Model\Faculty\Main as Faculty;
 use App\Model\User\Tracking;
 use Image;
 
@@ -258,6 +259,48 @@ class NewsController extends Controller
           'status' => 'success',
           'msg' => 'Status has been updated.'
       ]);
+    }
+
+
+    public function faculty($id=0){
+        $faculties = Faculty::get();
+        $data = Model::find($id)->newsFaculties;
+        return view($this->route.'.faculty', ['route'=>$this->route, 'id'=>$id, 'data'=>$data, 'faculties'=>$faculties]);
+    }
+    public function checkFaculties($id=0){
+        $news_id        = $_GET['news_id'];
+        $faculty_id      = $_GET['faculty_id'];
+        $now             = date('Y-m-d H:i:s');
+
+        $news = Model::find($news_id);
+        $dataPermision = $news->newsFaculties()->select('faculty_id')->get(); 
+
+        $is_permision_existed = 0;
+        foreach($dataPermision as $row){
+            if($row->faculty_id == $faculty_id){
+                $is_permision_existed = 1;
+            }
+        }
+       
+        if($is_permision_existed == 1){
+            $news->newsFaculties()->where('faculty_id', $faculty_id)->delete();
+            return response()->json([
+                  'status' => 'success',
+                  'msg' => 'Faculty has been removed.'
+            ]);
+        }else{
+            $data_permision=array(
+                'news_id'   => $news_id,
+                'faculty_id' => $faculty_id,
+                'created_at' => $now, 
+                'updated_at' => $now
+                );
+            $news->newsFaculties()->insert($data_permision);
+             return response()->json([
+                  'status' => 'success',
+                  'msg' => 'Faculty has been added.'
+              ]);
+        }
     }
 
 }

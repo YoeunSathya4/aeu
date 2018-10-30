@@ -1,5 +1,6 @@
-@extends($route.'.main')
-@section ('section-title', 'Edit News')
+@extends('cp.news.tabForm')
+@section ('section-title', "Overview")
+@section ('tab-active-edit', 'active')
 @section ('section-css')
 	<link href="{{ asset ('public/cp/css/plugin/fileinput/fileinput.min.css') }}" media="all" rel="stylesheet" type="text/css"/>
     <link href="{{ asset ('public/cp/css/plugin/fileinput/theme.css') }}" media="all" rel="stylesheet" type="text/css"/>
@@ -69,7 +70,7 @@
 	</script>
 @endsection
 
-@section ('section-content')
+@section ('tab-content')
 	@include('cp.layouts.error')
 	<form id="form" action="{{ route($route.'.update') }}" name="form" method="POST"  enctype="multipart/form-data">
 		{{ csrf_field() }}

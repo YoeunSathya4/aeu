@@ -23,43 +23,57 @@
 			require(__DIR__.'/setup.php');
 		});
 		
-		Route::group(['as' => 'menu.',  'prefix' => 'menu', 'namespace' => 'Menu'], function () {
-			require(__DIR__.'/menu.php');
-		});
-		Route::group(['as' => 'customer.',  'prefix' => 'customer', 'namespace' => 'Customer'], function () {
-			require(__DIR__.'/customer.php');
-		});
-		Route::group(['as' => 'order.',  'prefix' => 'order', 'namespace' => 'Order'], function () {
-			require(__DIR__.'/order.php');
-		});
+		
 		//:::::::::::::>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Slide
 		Route::group(['as' => 'slide.', 'prefix' => 'slide', 'namespace' => 'Slide'], function () {
 			require(__DIR__.'/slide.php');
+		});
+
+		//:::::::::::::>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Partner
+		Route::group(['as' => 'partner.', 'prefix' => 'partner', 'namespace' => 'Partner'], function () {
+			require(__DIR__.'/partner.php');
+		});
+
+		//:::::::::::::>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Faculty
+		Route::group(['as' => 'faculty.', 'prefix' => 'faculty', 'namespace' => 'Faculty'], function () {
+			require(__DIR__.'/faculty.php');
+		});
+
+		//:::::::::::::>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Academic Programe
+		Route::group(['as' => 'academic-programe.', 'prefix' => 'academic-programe', 'namespace' => 'AcademicPrograme'], function () {
+			require(__DIR__.'/academic-programe.php');
+		});
+
+		//:::::::::::::>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Admission
+		Route::group(['as' => 'admission.', 'prefix' => 'admission', 'namespace' => 'Admission'], function () {
+			require(__DIR__.'/admission.php');
+		});
+
+		//:::::::::::::>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Alumnies
+		Route::group(['as' => 'alumnies.', 'prefix' => 'alumnies', 'namespace' => 'Alumnies'], function () {
+			require(__DIR__.'/alumnies.php');
+		});
+
+		//:::::::::::::>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Industry
+		Route::group(['as' => 'industry.', 'prefix' => 'industry', 'namespace' => 'Industry'], function () {
+			require(__DIR__.'/industry.php');
+		});
+
+		//:::::::::::::>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Publication
+		Route::group(['as' => 'publication.', 'prefix' => 'publication', 'namespace' => 'Publication'], function () {
+			require(__DIR__.'/publication.php');
+		});
+
+		//:::::::::::::>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Publication
+		Route::group(['as' => 'major.', 'prefix' => 'major', 'namespace' => 'Major'], function () {
+			require(__DIR__.'/major.php');
 		});
 
 		//:::::::::::::>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> News
 		Route::group(['as' => 'news.', 'prefix' => 'news', 'namespace' => 'News'], function () {
 			require(__DIR__.'/news.php');
 		});
-		//:::::::::::::>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Promotion
-		Route::group(['as' => 'promotion.', 'prefix' => 'promotion', 'namespace' => 'Promotion'], function () {
-			require(__DIR__.'/promotion.php');
-		});
-		//:::::::::::::>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Announcement
-		Route::group(['as' => 'announcement.', 'prefix' => 'announcement', 'namespace' => 'Announcement'], function () {
-			require(__DIR__.'/announcement.php');
-		});
-
-		//:::::::::::::>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Category
-		Route::group(['as' => 'category.', 'prefix' => 'category', 'namespace' => 'Category'], function () {
-			require(__DIR__.'/category.php');
-		});
-
-		//:::::::::::::>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Category
-		Route::group(['as' => 'product.', 'prefix' => 'product', 'namespace' => 'Product'], function () {
-			require(__DIR__.'/product.php');
-		});
-
+		
 		Route::group(['as' => 'content.',  'prefix' => 'content', 'namespace' => 'Content'], function () {
 			require(__DIR__.'/content.php');
 		});
@@ -72,8 +86,5 @@
 		Route::group(['as' => 'visitor.', 'prefix' => 'visitor', 'namespace' => 'Visitor'], function () {
 			require(__DIR__.'/visitor.php');
 		});
-		//:::::::::::::>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Product
-		Route::group(['as' => 'product-post.', 'prefix' => 'product-post', 'namespace' => 'ProductPost'], function () {
-			require(__DIR__.'/product_post.php');
-		});
+		
 	});

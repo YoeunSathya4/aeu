@@ -19,6 +19,7 @@ class CreateVideosTable extends Migration
             $table->string('image', 550)->default('');
             $table->string('youtube_id', 550)->default('');
             $table->boolean('is_published')->default(0);
+            $table->boolean('is_deleted')->default(0);
              //The field that will appear for almost tables
             $table->integer('creator_id')->unsigned()->index()->nullable();
             $table->foreign('creator_id')->references('id')->on('users');

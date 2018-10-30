@@ -10,6 +10,14 @@ class News extends Model
     protected $table = 'news';
     //protected $dates = ['deleted_at'];
 
+    public function Faculty(){
+        return $this->belongsToMany('App\Model\Faculty\Faculty','faculties_news');
+    }
+
+    public function newsFaculties(){
+        return $this->hasMany('App\Model\Faculty\News','news_id');
+    }
+
     public function creator(){
         return $this->belongsTo('App\Model\User\User','creator_id');
     }
