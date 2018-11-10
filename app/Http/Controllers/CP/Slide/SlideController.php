@@ -29,11 +29,11 @@ class SlideController extends Controller
     }
 
     public function index(){
-        $data = Model::select('*');
-        $limit      =   intval(isset($_GET['limit'])?$_GET['limit']:10); 
+        $data      =   Model::select('*');
+        $limit     =   intval(isset($_GET['limit'])?$_GET['limit']:10); 
         $key       =   isset($_GET['key'])?$_GET['key']:"";
-        $from=isset($_GET['from'])?$_GET['from']:"";
-        $till=isset($_GET['till'])?$_GET['till']:"";
+        $from      =   isset($_GET['from'])?$_GET['from']:"";
+        $till      =   isset($_GET['till'])?$_GET['till']:"";
         $appends=array('limit'=>$limit);
         if( $key != "" ){
             $data = $data->where('name', 'like', '%'.$key.'%');

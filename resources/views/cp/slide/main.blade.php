@@ -19,7 +19,7 @@
 			<div class="tbl">
 				<div class="tbl-row">
 					<div class="tbl-cell">
-						<h3>Slide </h3> 
+						<h3>Slide</h3> 
 					</div>
 					<div class="tbl-cell tbl-cell-action">
 						<a href="{{ route('cp.slide.index') }}"  class="tabledit-delete-button btn btn-sm btn-primary" style="float: none;  @yield('hide-btn-back')  "><span class="fa fa-arrow-left"></span></a>
