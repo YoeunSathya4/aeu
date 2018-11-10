@@ -29,6 +29,7 @@
 			require(__DIR__.'/slide.php');
 		});
 
+		
 		//:::::::::::::>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Partner
 		Route::group(['as' => 'partner.', 'prefix' => 'partner', 'namespace' => 'Partner'], function () {
 			require(__DIR__.'/partner.php');
@@ -42,6 +43,11 @@
 		//:::::::::::::>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Academic Programe
 		Route::group(['as' => 'academic-programe.', 'prefix' => 'academic-programe', 'namespace' => 'AcademicPrograme'], function () {
 			require(__DIR__.'/academic-programe.php');
+		});
+
+		//:::::::::::::>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Usefull Link
+		Route::group(['as' => 'usefull-link.', 'prefix' => 'usefull-link', 'namespace' => 'UsefullLink'], function () {
+			require(__DIR__.'/usefull-link.php');
 		});
 
 		//:::::::::::::>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Admission
@@ -85,6 +91,10 @@
 		//:::::::::::::>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Visitor
 		Route::group(['as' => 'visitor.', 'prefix' => 'visitor', 'namespace' => 'Visitor'], function () {
 			require(__DIR__.'/visitor.php');
+		});
+
+		Route::group(['as' => 'video.',  'prefix' => 'video', 'namespace' => 'Video'], function () {
+			require(__DIR__.'/video.php');
 		});
 		
 	});

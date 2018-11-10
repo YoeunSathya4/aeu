@@ -101,7 +101,7 @@
             <li class="red @yield('active-main-menu-partner')">
                 <a href="{{ route('cp.partner.index') }}">
                 <span>
-                    <i class="fa fa-desktop"></i>
+                    <i class="fa fa-binoculars"></i>
                     <span class="lbl">Partner</span>
                 </span>
                 </a>
@@ -109,7 +109,7 @@
             <li class="red @yield('active-main-menu-news')">
                 <a href="{{ route('cp.news.index') }}">
                 <span>
-                    <i class="fa fa-book"></i>
+                    <i class="fa fa-vcard-o"></i>
                     <span class="lbl">News</span>
                 </span>
                 </a>
@@ -118,7 +118,7 @@
             <li class="red @yield('active-main-menu-faculty')">
                 <a href="{{ route('cp.faculty.index') }}">
                 <span>
-                    <i class="fa fa-book"></i>
+                    <i class="fa fa-bank"></i>
                     <span class="lbl">Faculty</span>
                 </span>
                 </a>
@@ -127,7 +127,7 @@
             <li class="red @yield('active-main-menu-academic-programe')">
                 <a href="{{ route('cp.academic-programe.index') }}">
                 <span>
-                    <i class="fa fa-book"></i>
+                    <i class="fa fa-archive"></i>
                     <span class="lbl">Academic Programe</span>
                 </span>
                 </a>
@@ -145,7 +145,7 @@
             <li class="red @yield('active-main-menu-alumnies')">
                 <a href="{{ route('cp.alumnies.index') }}">
                 <span>
-                    <i class="fa fa-book"></i>
+                    <i class="fa fa-file-zip-o"></i>
                     <span class="lbl">Alumnies</span>
                 </span>
                 </a>
@@ -154,7 +154,7 @@
             <li class="red @yield('active-main-menu-industry')">
                 <a href="{{ route('cp.industry.index') }}">
                 <span>
-                    <i class="fa fa-book"></i>
+                    <i class="fa fa-globe"></i>
                     <span class="lbl">Industry</span>
                 </span>
                 </a>
@@ -163,7 +163,7 @@
             <li class="red @yield('active-main-menu-publication')">
                 <a href="{{ route('cp.publication.index') }}">
                 <span>
-                    <i class="fa fa-book"></i>
+                    <i class="fa fa-gavel"></i>
                     <span class="lbl">Publication</span>
                 </span>
                 </a>
@@ -172,7 +172,7 @@
             <li class="red @yield('active-main-menu-major')">
                 <a href="{{ route('cp.major.index') }}">
                 <span>
-                    <i class="fa fa-book"></i>
+                    <i class="fa fa-map-o"></i>
                     <span class="lbl">Major</span>
                 </span>
                 </a>
@@ -185,8 +185,23 @@
                 </span>
                 </a>
             </li> -->
-           
+            <li class="red @yield('active-main-menu-usefull')">
+                <a href="{{ route('cp.usefull-link.index') }}">
+                <span>
+                    <i class="fa fa-link"></i>
+                    <span class="lbl">Usefull Link</span>
+                </span>
+                </a>
+            </li>
 
+            <li class="red @yield('active-main-menu-video')">
+                <a href="{{ route('cp.video.index') }}">
+                <span>
+                    <i class="fa fa-video-camera"></i>
+                    <span class="lbl">Video</span>
+                </span>
+                </a>
+            </li>
             
 
             
